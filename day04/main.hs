@@ -1,8 +1,6 @@
 import System.Environment
 import Data.List
-import Data.Char ( digitToInt )
 import Data.Ord
-import Debug.Trace
 import Data.List.Split
 
 type Board = [[Int]]
