@@ -34,8 +34,8 @@ worstBoard boards input = maximumBy (comparing (turnsForBingo input)) boards
 
 getBoardScore :: Board -> [Int] -> Int
 getBoardScore board input = sum elementsNot * last input
-    where elements = (map head . group . sort . concat) board
-          (_, elementsNot) = partition (`elem` input) elements
+    where uniqueElements = (nub . concat) board
+          (_, elementsNot) = partition (`elem` input) uniqueElements
 
 part1 :: [Board] -> [Int] -> IO ()
 part1 parsedBoards bingoDraws = do
