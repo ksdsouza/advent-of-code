@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "././main.hs"
+      component: "day05:exe:day05"
+
+    - path: "././Paths_day05.hs"
+      component: "day05:exe:day05"
