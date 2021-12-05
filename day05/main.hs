@@ -22,9 +22,14 @@ parseLine line = Vector x1 y1 x2 y2
           [x2, y2] = map read $ splitOn "," str2 :: [Int]
 
 generatePoints :: Vector -> [(Int, Int)]
-generatePoints points@(Vector x1 y1 x2 y2) = [(x, y) | x <- [xSmaller .. xBigger], y <- [ySmaller .. yBigger], inLine points x y]
-    where [xSmaller, xBigger] = sort [x1, x2]
-          [ySmaller, yBigger] = sort [y1, y2]
+generatePoints points@(Vector x1 y1 x2 y2)
+    | x1 == x2 = [(x1, y2 + signY*d) | d <- [0 .. deltaY]]
+    | y1 == y2 = [(x2 + signX*d, y1) | d <- [0 .. deltaX]]
+    | otherwise = [(x2 + signX*d, y2 + signY*d) | d <- [0 .. deltaX]]
+    where deltaX = abs (x1 - x2)
+          deltaY = abs (y1 - y2)
+          signX = if x1 - x2 < 0 then -1 else 1
+          signY = if y1 - y2 < 0 then -1 else 1
 
 calculateScore :: [(Int, Int)] -> Int
 calculateScore points = length duplicates
