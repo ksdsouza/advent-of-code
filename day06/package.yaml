@@ -1,0 +1,10 @@
+dependencies:
+  - split
+  - base
+
+source-dirs: .
+
+executables:
+  day06:
+    main: main.hs
+    source-dirs: .
