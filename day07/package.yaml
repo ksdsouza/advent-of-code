@@ -1,0 +1,12 @@
+dependencies:
+  - split
+  - containers
+  - multiset
+  - base
+
+source-dirs: .
+
+executables:
+  day07:
+    main: main.hs
+    source-dirs: .
