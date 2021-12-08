@@ -1,4 +1,4 @@
 cradle:
   cabal:
     - path: "./main.hs"
-      component: "day07:exe:day07"
+      component: "day08:exe:day08"

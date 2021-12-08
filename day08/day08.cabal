@@ -1,11 +1,11 @@
 cabal-version:      2.4
-name:               day07
+name:               day08
 version:            0.1.0.0
 
 author:             Katie Dsouza
 maintainer:         katiedsouza.13@gmail.com
 
-executable day07
+executable day08
     main-is:          main.hs
 
     -- LANGUAGE extensions used by modules in this package.
