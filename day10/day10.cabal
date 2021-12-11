@@ -1,0 +1,16 @@
+cabal-version:      2.4
+name:               day10
+version:            0.1.0.0
+
+author:             Katie Dsouza
+maintainer:         katiedsouza.13@gmail.com
+
+executable day10
+    main-is:          main.hs
+
+    -- LANGUAGE extensions used by modules in this package.
+    -- other-extensions:
+    build-depends:   base >=4.14 && <5,
+                     containers == 0.6.5.1
+    hs-source-dirs:   .
+    default-language: Haskell2010
