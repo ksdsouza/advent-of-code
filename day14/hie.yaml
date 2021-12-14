@@ -1,0 +1,4 @@
+cradle:
+  cabal:
+    - path: "./main.hs"
+      component: "day14:exe:day14"
